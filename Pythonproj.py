@@ -183,7 +183,6 @@ def admin_menu():
         report_message = "\n".join(f"{candidate}: {votes} votes" for candidate, votes in report)
         messagebox.showinfo("Election Report", report_message)
 
-    # Admin GUI Elements
     card_no_entry = tk.Entry(admin_window)
     name_entry = tk.Entry(admin_window)
     password_entry = tk.Entry(admin_window, show='*')
@@ -208,7 +207,7 @@ def admin_menu():
 
     tk.Button(admin_window, text="Generate Report", command=generate_report_cmd).pack()
     tk.Button(admin_window, text="Place Report", command=generate_place_report).pack(
-        pady=10)  # New button for place report
+        pady=10)
 
     tk.Button(admin_window, text="Reset Votes", command=reset_votes).pack(pady=10)
     tk.Button(admin_window, text="Clear Database", command=clear_database_gui).pack(pady=10)
